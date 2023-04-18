@@ -1,0 +1,69 @@
+﻿@model eCommerceProject.Models.CreateAccountModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CreateAccountModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="username" class="control-label"></label>
+                <input asp-for="username" class="form-control" />
+                <span asp-validation-for="username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password" class="control-label"></label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nameFull" class="control-label"></label>
+                <input asp-for="nameFull" class="form-control" />
+                <span asp-validation-for="nameFull" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cardNumber" class="control-label"></label>
+                <input asp-for="cardNumber" class="form-control" />
+                <span asp-validation-for="cardNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cardExpDate" class="control-label"></label>
+                <input asp-for="cardExpDate" class="form-control" />
+                <span asp-validation-for="cardExpDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cardSecCode" class="control-label"></label>
+                <input asp-for="cardSecCode" class="form-control" />
+                <span asp-validation-for="cardSecCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cardFunds" class="control-label"></label>
+                <input asp-for="cardFunds" class="form-control" />
+                <span asp-validation-for="cardFunds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="onHold" class="control-label"></label>
+                <input asp-for="onHold" class="form-control" />
+                <span asp-validation-for="onHold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
