@@ -4,7 +4,7 @@ using eCommerceProject.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<eCommerceProjectContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("eCommerceProjectContext") ?? throw new InvalidOperationException("Connection string 'eCommerceProjectContext' not found.")));
-
+builder.Services.AddSession();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -23,7 +23,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -9,11 +9,16 @@ namespace eCommerceProject.Data
 {
     public class eCommerceProjectContext : DbContext
     {
-        public eCommerceProjectContext (DbContextOptions<eCommerceProjectContext> options)
+        public eCommerceProjectContext()
+        {
+        }
+
+        public eCommerceProjectContext(DbContextOptions<eCommerceProjectContext> options)
             : base(options)
         {
         }
 
         public DbSet<eCommerceProject.Models.CreateAccountModel> CreateAccountModel { get; set; } = default!;
+        public DbSet<eCommerceProject.Models.LoginModel> LoginModel { get; set; }
     }
 }

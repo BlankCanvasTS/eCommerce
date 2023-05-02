@@ -4,6 +4,8 @@ namespace eCommerceProject.Models
 {
     public class LoginModel
     {
+        public int Id { get; set; }
+
         [Required]
         [Display(Name = "Username")]
         public string Username { get; set; }
