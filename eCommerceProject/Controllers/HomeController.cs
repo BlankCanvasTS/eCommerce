@@ -1,4 +1,5 @@
-﻿using eCommerceProject.Models;
+﻿using eCommerceProject.Data;
+using eCommerceProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,7 +8,6 @@ namespace eCommerceProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

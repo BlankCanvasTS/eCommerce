@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\eCommerceProject.csproj": {}
+    "C:\\Users\\gaele\\Desktop\\eCommerce\\eCommerce\\eCommerceProject\\eCommerceProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\eCommerceProject.csproj": {
+    "C:\\Users\\gaele\\Desktop\\eCommerce\\eCommerce\\eCommerceProject\\eCommerceProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\eCommerceProject.csproj",
+        "projectUniqueName": "C:\\Users\\gaele\\Desktop\\eCommerce\\eCommerce\\eCommerceProject\\eCommerceProject.csproj",
         "projectName": "eCommerceProject",
-        "projectPath": "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\eCommerceProject.csproj",
-        "packagesPath": "C:\\Users\\LAPTOP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\obj\\",
+        "projectPath": "C:\\Users\\gaele\\Desktop\\eCommerce\\eCommerce\\eCommerceProject\\eCommerceProject.csproj",
+        "packagesPath": "C:\\Users\\gaele\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaele\\Desktop\\eCommerce\\eCommerce\\eCommerceProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\LAPTOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\gaele\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +43,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.4, )"
@@ -78,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,12 +2,18 @@
 using eCommerceProject.Models;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+using eCommerceProject.Data;
 
 namespace eCommerceProject.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly eCommerceProjectContext _context;
 
+        public AccountController(eCommerceProjectContext context)
+        {
+            _context = context;
+        }
         // GET: /Account/
         public IActionResult Index()
         {
@@ -25,37 +31,30 @@ namespace eCommerceProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(LoginModel model)
+        public ActionResult Login(string username, string password)
         {
-            if (ModelState.IsValid)
+            var user = _context.CreateAccountModel.FirstOrDefault(u => u.username == username && u.password == password);
+
+            // Compare the data with the "password" parameter and return the result
+            if (user != null && user.password == password)
             {
-                // Call a method in your authentication service to validate the user's credentials
-                bool isAuthenticated = Models.AuthenticationService.AuthenticateUser(model.Username, model.Password);
+                string transactionKey = TransactionKey.CreateTransactionKey(username, DateTime.Now);
+                HttpContext.Session.SetString("TransactionKey", transactionKey);
 
-                if (isAuthenticated)
+                string savedTransactionKey = HttpContext.Session.GetString("TransactionKey");
+                if (savedTransactionKey != transactionKey)
                 {
-                    // Create an authentication token and save it in a cookie or session
-                    var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, model.Username)
-                };
-                    var identity = new ClaimsIdentity(claims, "login");
-                    var principal = new ClaimsPrincipal(identity);
-                    HttpContext.SignInAsync(principal);
-
-                    // Redirect the user to the home page or a protected area
-                    return RedirectToAction("Index", "Home");
+                    ViewBag.Error = "Error saving transaction key to session";
+                    return View();
                 }
-                else
-                {
-                    // Show a popup message when login fails
-                    TempData["LoginErrorMessage"] = "Invalid username or password";
 
-                    // Return the view with the model to display the error message
-                    return View("~/Views/Home/Login.cshtml", model);
-                }
+                return RedirectToAction("Index", "Home");
             }
-            return View(model);
+            else
+            {
+                ViewBag.Error = "Invalid username or password";
+                return View();
+            }
         }
     }
 }
