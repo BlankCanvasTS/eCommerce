@@ -1,0 +1,62 @@
+﻿@model eCommerceProject.Models.CheckoutModel
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+<h1 style="color: rgb(33, 196, 169)">Checkout</h1>
+
+<div class="row g-0">
+    <div class="col-md-4">
+        <img src="~/css/assets/Bronze.png" alt="Product1" width="300" height="350" frameBorder="0">
+    </div>
+    <div class="col-md-8">
+        <div style="align-self:baseline">
+            <ul>
+                <li>5 Device Access</li>
+                <li>Support Service </li>
+                <li>3 Bot Limit</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+
+
+<body onload="">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6">
+        <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
+            <form method="post" asp-action="CheckoutPageB" asp-controller="Checkout">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            @if (ViewBag.Error != null)
+            {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+            <div class="form-floating mb-3">
+            <input asp-for="CardNumber" class="form-control" />
+            <label asp-for="CardNumber">Card Number</label>
+            <span asp-validation-for="CardNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+            <input asp-for="CardExpDate" class="form-control" />
+            <label asp-for="CardExpDate">Card Expiration Date</label>
+            <span asp-validation-for="CardExpDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+            <input asp-for="CardSecCode" class="form-control" />
+            <label asp-for="CardSecCode">Card Security Code</label>
+            <span asp-validation-for="CardSecCode" class="text-danger"></span>
+            </div>
+            <div class="d-grid">
+                    <button id="Submit-button" class="btn btn-primary btn-login text-uppercase fw-bold">Subscribe</button>
+            </div>
+            </form>
+            <!-- </form> -->
+            </div>
+        </div>
+    </div>
+</body>
+

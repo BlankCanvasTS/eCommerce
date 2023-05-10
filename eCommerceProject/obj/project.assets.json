@@ -10949,23 +10949,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gaele\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\abelc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gaele\\Desktop\\eCommerce\\eCommerce\\eCommerceProject\\eCommerceProject.csproj",
+      "projectUniqueName": "C:\\Users\\abelc\\ecommerce\\Changes\\eCommerceProject\\eCommerceProject.csproj",
       "projectName": "eCommerceProject",
-      "projectPath": "C:\\Users\\gaele\\Desktop\\eCommerce\\eCommerce\\eCommerceProject\\eCommerceProject.csproj",
-      "packagesPath": "C:\\Users\\gaele\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gaele\\Desktop\\eCommerce\\eCommerce\\eCommerceProject\\obj\\",
+      "projectPath": "C:\\Users\\abelc\\ecommerce\\Changes\\eCommerceProject\\eCommerceProject.csproj",
+      "packagesPath": "C:\\Users\\abelc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\abelc\\ecommerce\\Changes\\eCommerceProject\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gaele\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\abelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11029,7 +11025,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

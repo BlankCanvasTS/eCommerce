@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Login";
 }
-<h1>Login</h1>
 
 <body onload="">
     <div class="container">
@@ -11,14 +10,11 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card border-0 shadow rounded-3 my-5">
                     <div class="card-body p-4 p-sm-5">
-                        <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
+                        <h5 class="card-title text-center mb-5 fw-light fs-8" style="font-size: 250%">Sign In</h5>
                         <!-- Add a form to submit the login information to the server -->
                         <form method="post" asp-action="Login" asp-controller="Account">
                             <div asp-validation-summary="All" class="text-danger"></div>
-                            @if (ViewBag.Error != null)
-                            {
-                                <div class="alert alert-danger">@ViewBag.Error</div>
-                            }
+
                             <div class="form-floating mb-3">
                                 <input asp-for="Username" class="form-control" />
                                 <label asp-for="Username">Username</label>

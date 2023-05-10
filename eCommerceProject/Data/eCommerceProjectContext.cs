@@ -20,5 +20,6 @@ namespace eCommerceProject.Data
 
         public DbSet<eCommerceProject.Models.CreateAccountModel> CreateAccountModel { get; set; } = default!;
         public DbSet<eCommerceProject.Models.LoginModel> LoginModel { get; set; }
+        public DbSet<eCommerceProject.Models.CheckoutModel> CartModel { get; set; }
     }
 }

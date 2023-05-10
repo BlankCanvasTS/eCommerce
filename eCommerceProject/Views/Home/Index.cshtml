@@ -2,33 +2,49 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container" style="margin-top: 75px">
-
-    <h1 style="font-size: 500%">TBD</h1>
-
-    <p style="margin-top: 5px; font-size: 120%">Our mission story</p>
-    <div class="image">
-        <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpng.pngtree.com%2Felement_our%2F20190602%2Fourmid%2Fpngtree-pink-cartoon-smart-computer-illustration-image_1409935.jpg&imgrefurl=https%3A%2F%2Fpngtree.com%2Fso%2Fcartoon-computer&tbnid=gk1V_lOIIrGniM&vet=12ahUKEwim0q6x0cj9AhU4OUQIHfvwC0sQMyggegUIARCRAg..i&docid=xguKmMIffhrxlM&w=360&h=360&q=cartoon%20computer%20images&ved=2ahUKEwim0q6x0cj9AhU4OUQIHfvwC0sQMyggegUIARCRAg" alt="example title image" align="right" />
+<div style="margin-bottom: 25px">
+    <div id="titleContainer">
+        <h1 id="webName">Chat Bots</h1>
+        <p style="margin-top: 5px; font-size: 120%; max-width: 500px">Our mission here at ---- is delivering AI Bots useful for automation of small applications or learning AI</p>
+        <a asp-area="" asp-controller="CreateAccount" asp-action="Create">
+            <button type="button" class="btn btn-secondary btn-outline-light">Get Started!</button>
+        </a>
+        <a asp-area="" asp-controller="Account" asp-action="Login">
+            <button type="button" class="btn btn-secondary btn-outline-light">Login</button>
+        </a>
     </div>
-    <button type="button">Get Started!</button>
-    <button type="button">Login</button>
-</div>
 
-<div class="container" id="about" style="margin-top: 100px">
-    <div class="image">
-        <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpng.pngtree.com%2Felement_our%2F20190602%2Fourmid%2Fpngtree-pink-cartoon-smart-computer-illustration-image_1409935.jpg&imgrefurl=https%3A%2F%2Fpngtree.com%2Fso%2Fcartoon-computer&tbnid=gk1V_lOIIrGniM&vet=12ahUKEwim0q6x0cj9AhU4OUQIHfvwC0sQMyggegUIARCRAg..i&docid=xguKmMIffhrxlM&w=360&h=360&q=cartoon%20computer%20images&ved=2ahUKEwim0q6x0cj9AhU4OUQIHfvwC0sQMyggegUIARCRAg" alt="example about image" />
+    <div class="card mb-3" id="homeCards">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="~/css/assets/About_main_page.png" alt="example about image" style="border-radius: 25px"/>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 id="aboutTitle">About</h2>
+                    <p style="margin-top: 5px; font-size: 110%">With AI growing and making it's mark on the world, Our team at ----- hope to deliver AI that is both useful and easy to understand.</p>
+                    <a asp-area="" asp-controller="Home" asp-action="About">
+                        <button type="button" class="btn btn-secondary btn-outline-light">About</button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <h2 style="font-size: 225%" align="right">About</h2>
 
-    <p style="margin-top: 5px; font-size: 110%" align="right">Short about us statement</p>
-</div>
-
-<div class="container" id="products" style="margin-top: 100px">
-
-    <h2 style="font-size: 225%">Products</h2>
-
-    <p style="margin-top: 5px; font-size: 110%">What we offer</p>
-    <div class="image">
-        <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpng.pngtree.com%2Felement_our%2F20190602%2Fourmid%2Fpngtree-pink-cartoon-smart-computer-illustration-image_1409935.jpg&imgrefurl=https%3A%2F%2Fpngtree.com%2Fso%2Fcartoon-computer&tbnid=gk1V_lOIIrGniM&vet=12ahUKEwim0q6x0cj9AhU4OUQIHfvwC0sQMyggegUIARCRAg..i&docid=xguKmMIffhrxlM&w=360&h=360&q=cartoon%20computer%20images&ved=2ahUKEwim0q6x0cj9AhU4OUQIHfvwC0sQMyggegUIARCRAg" alt="example products image" align="right" />
+    <div class="card mb-3" id="homeCards">
+        <div class="row g-0">
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h2 id="productsTitle">Products</h2>
+                    <p>We offer subscriptions to our services that provide our customers access to AI bots that are customizable and deployable.</p>
+                    <a asp-area="" asp-controller="Home" asp-action="Products">
+                        <button type="button" class="btn btn-secondary btn-outline-light">Products</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img src="~/css/assets/Product_main_page.png" alt="example products image" style="border-radius: 25px" />
+            </div>
+        </div>
     </div>
 </div>

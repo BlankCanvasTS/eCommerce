@@ -1,14 +1,57 @@
 ﻿@{
-    ViewData["Title"] = "Products";
+    ViewData["Title"] = "Subscriptions";
 }
-<h1>@ViewData["Title"]</h1>
+<h1 class="pageTitles">@ViewData["Title"]</h1>
 
-<div class="container" id="products" style="margin-top: 100px">
+<body>
 
-    <h2 style="font-size: 225%">Products</h2>
-
-    <p style="margin-top: 5px; font-size: 110%">What we offer</p>
-    <div class="image">
-        <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpng.pngtree.com%2Felement_our%2F20190602%2Fourmid%2Fpngtree-pink-cartoon-smart-computer-illustration-image_1409935.jpg&imgrefurl=https%3A%2F%2Fpngtree.com%2Fso%2Fcartoon-computer&tbnid=gk1V_lOIIrGniM&vet=12ahUKEwim0q6x0cj9AhU4OUQIHfvwC0sQMyggegUIARCRAg..i&docid=xguKmMIffhrxlM&w=360&h=360&q=cartoon%20computer%20images&ved=2ahUKEwim0q6x0cj9AhU4OUQIHfvwC0sQMyggegUIARCRAg" alt="example products image" align="right" />
+    <div id="ProductHeader" class="container-fluid text-center" style="margin-top:50px">
+        <h2 style="color: lightgray">Subscription/Pricing Table</h2>
     </div>
-</div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top:50px">
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/css/assets/Bronze.png" class="card-img-top" alt="Product1" width="100%" height="450" frameBorder="0">
+                <div class="card-body" style="background-color:rgb(64, 64, 64)">
+                    <h5 style="color:rgb(33, 145, 150)">Bronze</h5>
+                    <ul>
+                        <li>5 Device Access</li>
+                        <li>Support Service</li>
+                        <li>3 Bot Limit</li>
+                    </ul>
+                    <a class="btn btn-primary" asp-controller="Checkout" asp-action="CheckoutPageB">Choose Tier</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/css/assets/Silver.png" class="card-img-top" alt="Product2" width="100%" height="450" frameBorder="0">
+                <div class="card-body" style="background-color:rgb(64, 64, 64)">
+                    <h5 style="color:rgb(33, 145, 150)">Silver</h5>
+                    <ul>
+                        <li>10 Device Access</li>
+                        <li>Support Service</li>
+                        <li>7 Bot Limit</li>
+                    </ul>
+                    <a class="btn btn-primary" asp-controller="Checkout" asp-action="CheckoutPageS">Choose Tier</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/css/assets/Gold.png" class="card-img-top" alt="Product2" width="100%" height="450" frameBorder="0">
+                <div class="card-body" style="background-color:rgb(64, 64, 64)">
+                    <h5 style="color:rgb(33, 145, 150)">Gold</h5>
+                    <ul>
+                        <li>Unlimited Device Access</li>
+                        <li>Support Service</li>
+                        <li>30 Bot Limit</li>
+                    </ul>
+                    <a class="btn btn-primary" asp-controller="Checkout" asp-action="CheckoutPageG">Choose Tier</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
