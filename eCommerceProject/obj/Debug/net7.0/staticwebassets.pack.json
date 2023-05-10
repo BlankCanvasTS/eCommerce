@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\eCommerceProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\wwwroot\\assets\\AboutPlaceHolder.jpg",
+      "PackagePath": "staticwebassets\\assets\\AboutPlaceHolder.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\wwwroot\\assets\\ProductPlaceholder.jpg",
+      "PackagePath": "staticwebassets\\assets\\ProductPlaceholder.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\wwwroot\\assets\\ProductPlaceholder2.png",
+      "PackagePath": "staticwebassets\\assets\\ProductPlaceholder2.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\wwwroot\\assets\\ProductPlaceholder3.jpg",
+      "PackagePath": "staticwebassets\\assets\\ProductPlaceholder3.jpg"
+    },
+    {
       "Id": "C:\\Users\\LAPTOP\\source\\repos\\eCommerceProject\\eCommerceProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

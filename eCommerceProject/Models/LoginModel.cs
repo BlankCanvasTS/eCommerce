@@ -4,6 +4,10 @@ namespace eCommerceProject.Models
 {
     public class LoginModel
     {
+        internal string username;
+
+        public int Id { get; set; }
+
         [Required]
         [Display(Name = "Username")]
         public string Username { get; set; }
@@ -11,6 +15,6 @@ namespace eCommerceProject.Models
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
-        public string Password { get; set; }
+        public string password { get; set; }
     }
 }

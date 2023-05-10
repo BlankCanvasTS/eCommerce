@@ -1,4 +1,7 @@
-﻿namespace eCommerceProject.Models
+﻿using eCommerceProject.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace eCommerceProject.Models
 {
     public class User
     {
@@ -7,7 +10,17 @@
     }
     public class AuthenticationService
     {
-        public static bool AuthenticateUser(string username, string password)
+        private readonly eCommerceProjectContext _dbContext;
+
+        public AuthenticationService()
+        {
+        }
+
+        public AuthenticationService(eCommerceProjectContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+        public static async Task<bool> AuthenticateUserAsync(string username, string password)
         {
             // TODO: Add code to validate the user's credentials against a database or other authentication provider
             // Return true if the user is authenticated, false otherwise
@@ -20,9 +33,15 @@
         new User { Username = "user3", Password = "password3" }
     };
 
-            var user = users.FirstOrDefault(u => u.Username == username && u.Password == password);
+
+            var user = await _dbContext.LoginModel.FirstOrDefaultAsync(p => p.Username == username && p.password == password);
 
             return user != null;
+        }
+
+        internal object AuthenticateUser(object username, string password)
+        {
+            throw new NotImplementedException();
         }
     }
 

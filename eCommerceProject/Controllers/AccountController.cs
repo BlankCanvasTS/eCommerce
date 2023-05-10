@@ -1,12 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using eCommerceProject.Models;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using eCommerceProject.Data;
 
 namespace eCommerceProject.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly Models.AuthenticationService _authenticationService;
+
+        public AccountController(Models.AuthenticationService authenticationService)
+        {
+            _authenticationService = authenticationService;
+        }
 
         // GET: /Account/
         public IActionResult Index()
@@ -18,43 +26,11 @@ namespace eCommerceProject.Controllers
         {
             return View();
         }
-        // GET: /Account/CreateAccount/
-        public IActionResult CreateAccount()
-        {
-            return View();
-        }
 
         [HttpPost]
         public ActionResult Login(LoginModel model)
         {
-            if (ModelState.IsValid)
-            {
-                // Call a method in your authentication service to validate the user's credentials
-                bool isAuthenticated = Models.AuthenticationService.AuthenticateUser(model.Username, model.Password);
-
-                if (isAuthenticated)
-                {
-                    // Create an authentication token and save it in a cookie or session
-                    var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, model.Username)
-                };
-                    var identity = new ClaimsIdentity(claims, "login");
-                    var principal = new ClaimsPrincipal(identity);
-                    HttpContext.SignInAsync(principal);
-
-                    // Redirect the user to the home page or a protected area
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    // Show a popup message when login fails
-                    TempData["LoginErrorMessage"] = "Invalid username or password";
-
-                    // Return the view with the model to display the error message
-                    return View("~/Views/Home/Login.cshtml", model);
-                }
-            }
+            var user = _authenticationService.AuthenticateUser(model.Username, model.password);
             return View(model);
         }
     }
