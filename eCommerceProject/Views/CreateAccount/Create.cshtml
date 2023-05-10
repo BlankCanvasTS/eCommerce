@@ -2,43 +2,44 @@
 
 @{
     ViewData["Title"] = "Create";
+    Random random = new Random();
+    bool randomBoolean = random.Next(2) == 0;
 }
 
-<h1>Create</h1>
+<h1 style="color: white">Create Account</h1>
 
-<h4>CreateAccountModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form id="myForm" asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="username" class="control-label"></label>
+                <label asp-for="username" class="control-label" style="color: white"></label>
                 <input asp-for="username" class="form-control" />
                 <span asp-validation-for="username" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="password" class="control-label"></label>
+                <label asp-for="password" class="control-label" style="color: white"></label>
                 <input asp-for="password" class="form-control" />
                 <span asp-validation-for="password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="nameFull" class="control-label"></label>
+                <label asp-for="nameFull" class="control-label" style="color: white"></label>
                 <input asp-for="nameFull" class="form-control" />
                 <span asp-validation-for="nameFull" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="cardNumber" class="control-label"></label>
+                <label asp-for="cardNumber" class="control-label" style="color: white"></label>
                 <input asp-for="cardNumber" class="form-control" />
                 <span asp-validation-for="cardNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="cardExpDate" class="control-label"></label>
+                <label asp-for="cardExpDate" class="control-label" style="color: white"></label>
                 <input asp-for="cardExpDate" class="form-control" />
                 <span asp-validation-for="cardExpDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="cardSecCode" class="control-label"></label>
+                <label asp-for="cardSecCode" class="control-label" style="color: white"></label>
                 <input asp-for="cardSecCode" class="form-control" />
                 <span asp-validation-for="cardSecCode" class="text-danger"></span>
             </div>
@@ -48,11 +49,11 @@
             </div>
 
             <div class="form-group">
-                <input asp-for="onHold" id="onHold" class="form-control" value="False" readonly hidden />
+                <input asp-for="onHold" id="onHold" class="form-control" value="@randomBoolean.ToString()" readonly hidden />
                 <span asp-validation-for="onHold" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input  id="submitBtn" type="submit" value="Create" class="btn btn-primary" />
+                <input id="submitBtn" type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
